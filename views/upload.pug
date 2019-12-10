@@ -1,0 +1,12 @@
+extends layout
+
+block content
+   h1 Send Files
+   h2 Please select the file(s) you wish to upload
+
+   form(action="/myupload" enctype="multipart/form-data" method="POST")
+      input(type="file" name="myfile" accept="image/png" multiple)
+      br
+      button send!
+   p
+      em only images of extension "png" are accepted!
